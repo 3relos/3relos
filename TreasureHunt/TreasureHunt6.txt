@@ -1,0 +1,21 @@
+lines = 20, columns = 40
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                      X
+X                                      X
+X                                      X
+X                 *                    X
+X                                      X
+X                                      X
+X                                      X
+X                                      X
+X                                      X
+X                                      X
+X                                      X
+X                                      X
+X                                      X
+X                                      X
+X                                      X
+X                                      X
+X                                      X
+X$                                     X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
