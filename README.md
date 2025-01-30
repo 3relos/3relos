@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @3relos
 - 👀 I’m interested in physics, astronomy and cs
-- 🌱 I’m currently learning thermodynamics
+- 🌱 I’m currently learning astronomy and statistics
 - 📫 How to reach me: vasco@uni-bonn.de
 
 <!---
