@@ -2,7 +2,7 @@
 
 # Created: Vasco (3relos)
 
-# number abfragen
+# retrieve number
 read -p "Enter exercise sheet no.: " number
 
 # Source directory with the PDF-files
