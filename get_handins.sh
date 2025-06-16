@@ -6,9 +6,14 @@
 read -p "Enter exercise sheet no.: " number
 
 # Source directory with the PDF-files
-SOURCE_DIR="/Users/<Username>/Downloads/Uebungsblatt$number"
+if [ $number -gt 9 ]
+then
+    SOURCE_DIR="/home/<user>/Downloads/Hausaufgabe $number" # Update path acoordingly to your needs!
+else
+    SOURCE_DIR="/home/<user>/Downloads/Hausaufgabe 0$number" # Update path acoordingly to your needs!
+fi
 # Destiny directory, where the PDF-files should be copied
-DEST_DIR="/Users/<Username>/Tutorium_WS24-25/Abgaben/Ex$number"
+DEST_DIR="/home/<user>/<path>/Blatt$number" # Update path acoordingly to your needs!
 
 # Check if the source dir exists
 [ -d "$SOURCE_DIR" ] || { echo "Source directory does not exist: $SOURCE_DIR"; exit 1; }
@@ -25,12 +30,12 @@ echo "All PDF-files were copied to '$DEST_DIR'."
 echo "Number copied files: $(find $DEST_DIR -maxdepth 1 -type f | wc -l)"
 
 # retrieve if source dir should be deleted
-read -p "Delete original directory? [y/n]" del
+read -p "Delete original directory? [y/n] " del
 
 # delete source dir if wanted
 if [[ "$del" == "y" ]]
 then
-    rm -R $SOURCE_DIR
+    rm -R "$SOURCE_DIR"
     echo "Deleted source directory '$SOURCE_DIR'"
 else
     echo "As you wish!"
