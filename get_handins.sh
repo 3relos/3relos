@@ -20,3 +20,21 @@ DEST_DIR="/Users/<Username>/Tutorium_WS24-25/Abgaben/Ex$number"
 find "$SOURCE_DIR" -type f -iname "*.pdf" -exec cp {} "$DEST_DIR" \;
 
 echo "All PDF-files were copied to '$DEST_DIR'."
+
+# Searches and prints the number of pdf.files in destiny dir
+echo "Number copied files: $(find $DEST_DIR -maxdepth 1 -type f | wc -l)"
+
+# retrieve if source dir should be deleted
+read -p "Delete original directory? [y/n]" del
+
+# delete source dir if wanted
+if [[ "$del" == "y" ]]
+then
+    rm -R $SOURCE_DIR
+    echo "Deleted source directory '$SOURCE_DIR'"
+else
+    echo "As you wish!"
+    echo "Not deleted source directory."
+fi
+
+echo "Finished!"
